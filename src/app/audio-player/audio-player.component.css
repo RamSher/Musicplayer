@@ -1,0 +1,56 @@
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.audio-player p:first-child {
+  align-self: flex-start;
+}
+.audio-player p {
+  font-size: 28px;
+}
+
+.cover-art {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.progress-container {
+  width: 100%;
+  height: 4px;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+  transition: height 0.2s ease;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #2196f3;
+  border-radius: 2px;
+  width: 0%;
+}
+
+.progress-thumb {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 2px solid #2196f3;
+  border-radius: 50%;
+  transform: translateX(-10px);
+}

@@ -1,0 +1,23 @@
+<div class="audio-player">
+  <p>{{ currentTrack?.name }}</p>
+  <img src="{{ currentTrack?.cover }}" alt="Cover Art" class="cover-art" />
+  <p>{{ currentTrack?.title }}</p>
+  <div class="controls">
+    <button mat-icon-button (click)="previousTrack()">
+      <mat-icon>skip_previous</mat-icon>
+    </button>
+    <button mat-icon-button (click)="togglePlayPause()">
+      <mat-icon>{{ isPlaying ? "pause" : "play_arrow" }}</mat-icon>
+    </button>
+    <button mat-icon-button (click)="stop()">
+      <mat-icon>stop</mat-icon>
+    </button>
+    <button mat-icon-button (click)="nextTrack()">
+      <mat-icon>skip_next</mat-icon>
+    </button>
+  </div>
+  <div class="progress-container" (click)="seekTo($event)">
+    <div class="progress-bar" [style.width]="progress + '%'"></div>
+    <div class="progress-thumb" [ngStyle]="{ left: progress + '%' }"></div>
+  </div>
+</div>
